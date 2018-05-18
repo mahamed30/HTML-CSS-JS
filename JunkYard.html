@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RAFS JUNKYARD</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+	
+	<script>
+	// CART FUNCTION
+	$(document).ready(function(){
+    var x = 0;    
+    function resetcounter() {
+    	x = 0;
+    	document.getElementById("counter").value = x;
+    }
+
+   function count() {
+   	if(x<5)	{x += 1;} 
+    	else { x=0; }
+    	document.getElementById("counter").value = x;
+   }
+   	$('#btnCount').click(
+    	function() {
+      	count();
+    });
+
+    $('#reset').click(
+    	function() {
+      	resetcounter();
+    });
+
+    // MOUSE ENTER FUNCTION
+   $('#title').hover(function(){
+      $(this).addClass('enterTitle');
+   });
+
+    $('#backToTop').on('click', function () {
+      $('html,body').animate({
+        scrollTop: 0
+    }, 700);
+   });
+
+    // $(document).ready(function(){
+    //   $('.slider').slick({
+    //     dots: true,
+  		// 	infinite: true,
+
+    //   });
+    // });
+
+});
+
+	</script>	
+
+	<style type="text/css">
+
+	/*GROUP MEMBERS: Mohammed Khan, Mohammed Hamed, Omer, Souban*/
+
+		/* RESET CSS */
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, sub, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+	/*MAIN CSS*/
+		h1{font-size: 50px; text-decoration: none; color:#222;}
+
+		ul{margin-top: 0;}
+		.header{background: #f2f2f2; height: 200px;}
+		.header .search{margin-top: 8px;}
+		.container{
+			width: 1200px; 
+			height: 60px;   
+			margin-right: auto;
+    	margin-left: auto;
+    	padding-left: 15px;
+    	padding-right: 15px;
+    }
+    .divRight {float:right;}
+    .row {margin-left: -15px;margin-right: -15px;}
+    .divMed {width: 40%; position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;}
+    .divSmall {width: 17%;	position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;}
+    .divSmall a{text-decoration: none;}
+    .wid75{width: 75%;}
+    .wid20{width: 20%;}
+    .socials {display: inline-block; margin-right: 23px;margin-top:20px;}
+    .socials li{display: inline-block; color: #19caaf;padding: 5px;}
+    .search {    
+    	position: relative;
+    	width: 100%;
+    	height: 35px;
+    	padding: 8.5px 0px 8.5px 11px;
+    	border: 1px solid #E5E5E5;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+    	border-radius: 3px;
+    	background: #FFF;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+		}
+		.buttonSearch {
+	    background: none;
+	    border: none;
+	    display: inline-block;
+	    padding: 0;
+	    outline: none;
+	    outline-offset: 0;
+	    cursor: pointer;
+	    -webkit-appearance: none;
+	    position: absolute;
+	    right: 0;
+	    top: -1px;
+	    bottom: -1px;
+	    padding: 0 18px;
+	    border-top-right-radius: 3px;
+	    border-bottom-right-radius: 3px;
+	    background: #19caaf;
+	    color: #FFF;
+	    font-size: 14px;
+		}
+		.search input {
+	     line-height: 16px; 
+	     height: 100%; 
+	     width: 100%; 
+	     background: transparent; 
+	     border: none; 
+	     color: #2f2f2f; 
+	     outline: none; 
+		}
+		.nav{
+			margin-top: 20px;
+		  background: #2f2f2f;
+		  border-top-right-radius: 5px;
+		  border-top-left-radius: 5px;
+		  padding-left: 55px;
+		  height: 60px;
+		}
+		.nav li{padding-right: 50px;}
+		.nav span{color:#fff; }
+		.nav span:hover{color:#19caaf; transition:all .2s; }
+		.nav a{text-decoration: none;}
+		.nav i {color:#19caaf }
+		.shopCart{    
+			padding-left: 44px;
+    	background-color: #19caaf;
+    	padding-bottom: 22px;
+    	padding-top: 22px;
+    	margin-top: -22px;
+    	border-top-right-radius: 5px;
+    }
+		.fSize26{font-size: 26px;}
+		.fSize22{font-size: 22px;}
+		.iB{display: inline-block;}
+		.iF{display: inline-flex;}
+		.fL{float: left;}
+		.fR{float: right;}
+
+		.mT100{margin-top: 100px;}
+		.mT10{margin-top:10px;}
+		.pT22{padding-top:22px;}
+		.pL5{padding-left:5px;}
+		.pT5{padding-top: 5px;}
+		.pT15{padding-top: 15px;}
+		.greenColor{color: #19caaf;}
+
+		
+	
+		.menu li{   
+			padding-left: 22px;
+    	height: 20px;
+    	background-color: #f2f2f2;
+    	padding-bottom: 15px;
+    	padding-top: 20px;
+    	border-bottom: 1px solid #d9d9d9;
+    }
+    .menu li:hover{ background-color: #19caaf; transition: all .2s}
+    .menu a{text-decoration: none; color: #222;}
+    .mainImgContainer{position: relative;}
+    .heroText{position: absolute;bottom: 18px;left: 5px;padding: 10px;background: rgba(0,0,0,.8);}
+    .heroText2{position: absolute;top: 18px;left: 5px;padding: 10px;}
+    .heroText p{font-size: 36px;color: white;}
+    .content{width: 75%; float:right;}
+    .heroImg{width: 100%;margin-left: 3px;}
+    .halfDiv{width: 50%;}
+    .fullImg{width: 100%;}
+    .h320{height: 320px;}
+    .heroContainer{height: 500px;width: 927px;}
+
+    .productBox{height: 200px;width: 430px;border: 2px solid grey;margin-top: 20px;padding-top: 20px;}
+    .productBoxText{width: 225px;padding-left: 15px;}
+    .productImg{margin-top: -50px; padding-left: 225px;}
+    .productImg3{margin-top: -50px; padding-left: 200px;}
+    .productBox3{width: 292px;border: 2px solid grey;height: 100px;padding-top: 8px;}
+    .latestProducts{background: #f2f2f2;padding: 15px; margin-bottom: 20px;}
+    .footerInfo p{color: #19caaf;padding-top: 16px;font-size: 14px;}
+    .footerInfo p:hover{color:#222; transition:all .2s; cursor: pointer;}
+    .footerInfo p:first-child{color:#222;}
+    #footer {
+			background: #f2f2f2;
+	    height: 200px;
+	    padding: 0 60px;
+	    padding-top: 30px;
+    }
+    .footerContainer{
+    	overflow: hidden;
+    	margin: 0 auto;
+   	 	width: 100%;
+    }
+    /*KEYFRAME ANIMATIONS*/
+    .enterTitle{
+		  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+		   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+		  -webkit-transform: translate3d(0, 0, 0);
+		   transform: translate3d(0, 0, 0);
+		  -webkit-backface-visibility: hidden;
+		   backface-visibility: hidden;
+		  -webkit-perspective: 1000px;
+       perspective: 1000px;
+			}
+
+		@-webkit-keyframes shake {
+			  10%, 90% {
+			    -webkit-transform: translate3d(-1px, 0, 0);
+			            transform: translate3d(-1px, 0, 0);
+			  }
+			  20%, 80% {
+			    -webkit-transform: translate3d(2px, 0, 0);
+			            transform: translate3d(2px, 0, 0);
+			  }
+			  30%, 50%, 70% {
+			    -webkit-transform: translate3d(-4px, 0, 0);
+			            transform: translate3d(-4px, 0, 0);
+			  }
+			  40%, 60% {
+			    -webkit-transform: translate3d(4px, 0, 0);
+			            transform: translate3d(4px, 0, 0);
+			  }}
+		@keyframes shake {
+			  10%, 90% {
+			    -webkit-transform: translate3d(-1px, 0, 0);
+			            transform: translate3d(-1px, 0, 0);
+			  }
+			  20%, 80% {
+			    -webkit-transform: translate3d(2px, 0, 0);
+			            transform: translate3d(2px, 0, 0);
+			  }
+			  30%, 50%, 70% {
+			    -webkit-transform: translate3d(-4px, 0, 0);
+			            transform: translate3d(-4px, 0, 0);
+			  }
+			  40%, 60% {
+			    -webkit-transform: translate3d(4px, 0, 0);
+			            transform: translate3d(4px, 0, 0);
+			  }}
+
+	</style>
+	<body>
+	<!-- TOP NAVIGATION -->
+		<header class="header"style="background-color:#22395e;">
+			<div class="container">
+				<div class="divRight">
+					<ul class="socials">
+						<li>
+							<span class="fa fa-facebook"></span>
+						</li>
+						<li>
+							<span class="fa fa-twitter"></span>
+						</li>
+						<li>
+							<span class="fa fa-google-plus"></span>
+						</li>
+						<li>
+							<span class="fa fa-youtube"></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="divSmall fL" style="width: 25%;">	
+							<h1 id="title"><span style="font-size:35px; color:#308781;"> RAFS JUNKYARD</span></h1>
+							<p style="text-align:center;width:270px;padding-left: 2px;padding-top: 4px;color:#a1afae; border:solid 3px #308781;">Exclusive Site of Automotive Parts</p>						
+					</div>
+					<div class="divMed fL">
+						<div id="searchBar" class="search">
+							<input type="text" name="search" value="" placeholder="Search">
+							<button type="button" class="buttonSearch">Search</button>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="divSmall fR mT10">
+						<i class="fa fa-phone fSize22" aria-hidden="true"></i>
+						<h1 class="iB fSize26">800-1122-220</h1>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="divRight">
+						<div class="nav" style="margin-top: 0px;">
+							<ul class="iF pT22">
+								<a href="JunkYard.html">
+									<li>
+										<i class="fa fa-home" aria-hidden="true"></i>
+										<span class="pL5">Home</span>
+									</li>
+								</a>
+								<a href="favorite.html">	
+									<li>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<span class="pL5">Favorites</span>
+									</li>
+								</a>
+								<a href="my_account.html">	
+									<li>
+										<i class="fa fa-user-circle" aria-hidden="true"></i>
+										<span class="pL5">My Account</span>
+									</li>
+								</a>
+								<a href="cart.html">
+									<li>
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+										<span class="pL5">Shopping Cart</span>
+									</li>
+								</a>	
+								<a href="aboutus.html">
+									<li>
+										<i class="fa fa-check" aria-hidden="true"></i>
+										<span class="pL5">About Us</span>
+									</li>
+								</a>	
+							</ul>
+						</div>						
+					</div>
+					<div class="wid20 divLeft">
+						<div class="nav" style="background:#1c0314;">
+							<ul class="iF pT22">
+								<li>
+									<span class="pL5" style="font-size:25px;font-family:anton;text-align:center;padding-right:80px;margin-left:-10px;">INVENTORY</span>
+								</li>
+							</ul>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--END TOP NAVIGATION -->
+
+		<!-- LEFT ASIDE -->
+		<aside>
+			<div class="container">
+				<div class="row" style="width:20.5%;">
+					<ul class="menu">
+						<a href="Engine.html">
+							<li>Engines</li>
+						</a>
+						<a href="brakes.html">
+							<li>Brake Parts</li>
+						</a>	
+						<a href="transmission.html">
+							<li>Transmission</li>
+						</a>	
+						<a href="auto.html">
+							<li>Auto Body Parts</li>
+						</a>	
+						<a href="tires.html">
+							<li>Tires</li>
+						</a>	
+						<a href="wheels.html">
+							<li>Wheels/Rims</li>
+						</a>	
+						<a href="seats.html">
+							<li>Seats</li>
+						</a>	
+						<a href="suspention.html">
+							<li>Suspension</li>
+						</a>	
+						<a href="category.html">
+							<li>Other Parts</li>
+						</a>	
+						
+					</ul>
+				</div>
+			</div>
+		</aside>
+
+		<!-- MAIN CONTENT -->
+		<div class="container" >
+			<div class="content">
+				<div class="row">
+					<div class="mainImgContainer" style=" margin-top: -42px;">
+						<div class="slider">
+	  					<div class="heroContainer">
+	  						<img class="heroImg" src="Junkyard/car.jpg">
+	  						
+								<div class="heroText2">
+									
+									<p style="text-align:center; width:450px; padding-left: 2px;margin-top:-40px; color:#a1afae; border:solid 3px gray; font-size: 30px; color: white; background-color:black;">Explore all your needed parts!</p>
+								</div>
+							</div>	
+						</div>
+					</div>	
+				</div>	
+			</div>
+			<div class="content" style="margin-top: 20px;">
+				<div class="productBox fL">
+					<div class="productBoxText">
+						<p class="greenColor">Wheels</p>
+						<p class="pT5">Check out the deal!</p>
+						<p class="pT15"> <strong>Shop Now</strong></p>
+					</div>
+					<div class="productImg">
+						<img src="Junkyard/wheels.jpg" style="width:80%;">
+					</div>
+				</div>
+				<div class="productBox fR">
+					<div class="productBoxText">
+						<p class="greenColor">Tires</p>
+						<p class="pT5">Check out the deal!</p>
+						<p class="pT15"> <strong>Shop Now</strong></p>
+					</div>
+					<div class="productImg">
+						<img src="Junkyard/tires.jpg" style="width: 54%; padding-left: 45px;">
+					</div>
+				</div>			
+			</div>
+		</div>	
+
+		<!-- FOOTER -->	
+		
+		<div class="content" style="width:100%;">
+			<div class="row">
+				<footer id="footer">
+					<div class="footerContainer">
+						<div class="fL footerInfo" style="width:20%;">
+							<p class="">Information</p>
+							<p class="">About</p>
+							<p class="">Delivery Information</p>
+							<p class="">Privacy Policy</p>
+							<p class="">Terms & Conditions</p>
+						</div>
+						<div class="fL footerInfo" style="width:20%;">
+							<p class="">Customer Service</p>
+							<p class="">Contact Us</p>
+							<p class="">Returns</p>
+							<p class="">Site Map</p>
+						</div>
+						<div class="fL footerInfo" style="width:20%;">
+							<p class="">Extras</p>
+							<p class="">Brands</p>
+							<p class="">Gift Vouchers</p>
+							<p class="">Affiliates</p>
+							<p class="">Specials</p>
+						</div>
+						<div class="fL footerInfo" style="width:20%;">
+							<p class="">My Account</p>
+							<p class="">My Account</p>
+							<p class="">Order History</p>
+							<p class="">Wish List</p>
+							<p class="">Newsletter</p>
+						</div>
+						<div class="fL footerInfo" style="width:20%;">
+							<p class="">Follow Us</p>
+							<p class="">
+								<span class="fa fa-twitter pL5"></span>
+								Facebook
+							</p>
+							<p class="">
+								<span class="fa fa-facebook pL5"></span>
+								Twitter
+							</p>
+							<p class="">
+								<span class="fa fa-google-plus pL5"></span>
+								Google +
+							</p>
+							<p class="">
+								<span class="fa fa-youtube pL5"></span>
+								Youtube
+							</p>
+						</div>	
+					</div>
+					<h2 style="padding-top:20px; cursor: pointer;" id='backToTop'>Return To Top <i class="fa fa-arrow-up" aria-hidden="true"></i></h1>
+				</footer>
+			</div>
+		</div>
+
+	</body>
+
+
+</html>
